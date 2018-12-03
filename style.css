@@ -10,147 +10,87 @@ body {
 	padding: 14px 16px;
 }
 
-/* Add a black background color to the top navigation */
-.navbar {
-	overflow: hidden;
-	/*background-color: #1EAFE7;*/
-	background-color: #1D4DA2;
-	position: -webkit-sticky;
-	position: sticky;
+.navbar_container {
 	top: 0;
+	position: sticky;
+	position: -webkit-sticky;
 }
 
-/* Navbar links style */
-.navbar_links {
-	list-style-type: none;
-	margin: 0; /* Margin of the "list" */
-	padding: 0;
-}
-
-.navbar_links li {
-	display: inline; /* Put list elements on a single line */
-	float: left;
-}
-
-.navbar_links a {
-	display: block; /* set a "block theme" */
-	color: white;
-	text-align-last: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change the color of links on hover */
-.navbar_links a:hover {
-	/*background-color: #111;*/
-	/*background-color: #1D4D80;*/
-	background-color: #0080FF;
-}
-
-.navbar_links .icon {
-	display: none;
-}
-
-/* Add a color to the active/current link */
-.active {
-	/*background-color: #4CAF50;*/
-	background-color: #1D4DA2;
-	color: white;
-}
-
-
-/* 
- * Dropdown menu for teams
- */
-
-.dropdown {
-	float: left;
+nav.navbar {
 	overflow: hidden;
+	background-color: #1D4DA2;
 }
 
-.dropdown-button {
-	font-size: 16px;
-	border: none;
-	/*outline: none;*/
-	color: white;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
+
+nav.navbar > .navlinks, ul.dropdown-content {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
 	margin: 0;
 }
 
-.dropdown-content {
-	visibility: hidden;
-	position: absolute;
-}
-
-.dropdown-content li {
-	clear: both;
-}
-
-.dropdown:hover .dropdown-content {
-	position: relative;
-	visibility: visible;
-}
-
-.dropdown-button:hover {
-	background-color: #0080FF;
+ul.navlinks > li a {
+	float: left;
 	display: block;
+	color: #F2F2F2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
-/*.dropdown-button {
-	font-size: 16px;
+
+.dropdown .dropdown-button {
+	font-size: inherit;
 	border: none;
 	outline: none;
 	color: white;
 	padding: 14px 16px;
 	background-color: inherit;
-	font-family: inherit;
 	margin: 0;
 }
 
-.dropdown:hover .dropdown-button {
+.dropdown-content {
+	display: none;
+	left: 172px;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+ul.dropdown-content > li > a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+nav.navbar ul.navlinks a:hover, .dropdown:hover .dropdown-button {
 	background-color: #0080FF;
 }
 
-.dropdown-content {
-	position: absolute;
-	visibility: hidden;
-	background-color: #F9F9F9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	visibility: hidden;
-}
-
-.dropdown-content li {
-	clear: left;
-}
-
-.dropdown-content a:hover {
-	background-color: #DDD;
-}
-
-.dropdown-content a {
-	padding: 12px 16px;
-	text-decoration: none;
-	text-align: left;
-	background-color: #F9F9F9;
+.dropdown-content li a:hover {
 	color: black;
 }
 
 .dropdown:hover .dropdown-content {
 	display: block;
-	position: relative;
-	visibility: visible;
 }
-*/
+
+/* Change the color of links on hover */
+/*.navbar > ul.navbar_links a:hover {
+	background-color: #0080FF;
+}*/
 
 /*
  * Responsive website
  */
 
 /* When the screen is less than 600 pixels wide, hide all links, except active */
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
 	.navbar_links li:not(:first-child) {
 		display: none;
 	}
@@ -161,9 +101,9 @@ body {
 	}
 }
 
-/* The "responsive" class is added to the navbar_links with JavaScript 
+ The "responsive" class is added to the navbar_links with JavaScript 
  * when the user clicks on the icon. This displays the links vertically
- * instead of horizontally) */
+ * instead of horizontally) 
 @media screen and (max-width: 600px) {
 	.navbar {
 		background-color: #1D4DA2;
@@ -179,4 +119,4 @@ body {
 		display: block;
 		text-align: left;
 	}
-}
+}*/
