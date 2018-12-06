@@ -39,6 +39,10 @@ ul.navlinks > li a {
 	font-size: 17px;
 }
 
+.dropdown {
+	float: left;
+}
+
 .dropdown .dropdown-button {
 	font-size: inherit;
 	border: none;
@@ -80,43 +84,65 @@ nav.navbar ul.navlinks a:hover, .dropdown:hover .dropdown-button {
 	display: block;
 }
 
-/* Change the color of links on hover */
-/*.navbar > ul.navbar_links a:hover {
-	background-color: #0080FF;
-}*/
+.navbar > .navlinks > li > a.icon {
+	display: none;
+}
+
+
 
 /*
  * Responsive website
  */
 
 /* When the screen is less than 600 pixels wide, hide all links, except active */
-/*@media screen and (max-width: 600px) {
-	.navbar_links li:not(:first-child) {
+@media screen and (max-width: 600px) {
+	.navlinks > li:not(:first-child):not(.toggle-icon) {
 		display: none;
 	}
 
-	.navbar_links a.icon {
+	.navbar > .navlinks > li > a.icon {
 		float: right;
 		display: block;
 	}
+
+	.navbar > .navlinks li a {
+		float: left;
+		text-align: left;
+	}
 }
 
- The "responsive" class is added to the navbar_links with JavaScript 
+/* The "responsive" class is added to the navbar_links with JavaScript 
  * when the user clicks on the icon. This displays the links vertically
- * instead of horizontally) 
+ * instead of horizontally) */
 @media screen and (max-width: 600px) {
 	.navbar {
 		background-color: #1D4DA2;
 	}
-	.navbar_links.responsive a.icon {
+
+	.navbar > .navlinks.responsive > li > a.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
 	
-	.navbar_links.responsive li {
-		float: none;
+	.navbar > .navlinks.responsive li {
 		display: block;
+	}
+
+	.navbar > .navlinks.responsive > li a, .navlinks.responsive > .dropdown {
+		float: none;
 		text-align: left;
 	}
-}*/
+
+	.navlinks.responsive > .dropdown > .dropdown-content {
+		position: relative;
+		left: 0;
+		width: 100%;
+	}
+
+	.navlinks.responsive .dropdown .dropdown-button {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+}
