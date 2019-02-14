@@ -1,4 +1,8 @@
 /* Basic page layout */
+html, body {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	background-color: #F2F2F2;
@@ -10,15 +14,39 @@ body {
 	padding: 14px 16px;
 }
 
-.default-footer {
-	background-color: #333;
-	padding: 35px 40px;
-	text-align: center;
-	color: white;
-	bottom: 0;
+#main {
+	/*height: 100% - 80px;*/
+	min-height: 100%;
+	margin-bottom: -80px;
 }
 
-.default-footer a {
+/*#main:after {
+	content: "";
+	display: block;
+}*/
+
+#default-footer, #main:after {
+	height: 80px;
+}
+
+#default-footer {
+	background-color: #333;
+	padding: 10px 15px;
+	text-align: center;
+	color: white;
+	/*height: 80px;*/
+	/*top: 100%;*/
+	/*bottom: -80px;*/
+	/*position: bottom;
+	height: 80px;
+	background-color: #333;*/
+	/*padding: 10px 15px;
+	text-align: center;
+	color: white;
+	width: 100%;*/
+}
+
+#default-footer a {
 	text-decoration: none;
 	color: inherit;
 }
